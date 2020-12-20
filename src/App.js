@@ -8,30 +8,10 @@ import SearchResults from "./components/SearchResults";
 import Wrapper from "./components/Wrapper";
 
 
-
-
-function FormInput() {
-   return <div>
-      <SearchForm />
-   </div>;
-}
-
-function UsersView() {
-   // props: users (filteredUsers)
-   // button to filter by name 
-      // onClick -> this.sortUsers
-   return <div>
-      <div>
-         <SearchResults props={this.state.allUsers}/>
-      </div>
-      </div>;
-}
-
 class App extends React.Component {
    state = {
       allUsers: [],
-      filteredUsers: [],
-      searchTerm: "",
+      // searchTerm: "",
    }
    // component did mount
    componentDidMount() {
@@ -50,12 +30,12 @@ class App extends React.Component {
             // allUsers: [],
             // filteredUsers: [],
    // handleInputChange
-   handleInputChange = event => {
-     this.setState({ searchTerm: event.target.value})
-     .then(() => {
-        const filtered = this.state.filteredUsers.filter(user => user.name.contains(this.state.searchTerm));
-        this.setState({ filteredUseres: filtered })
-   })
+   handleInputChange = (event) => {
+      const search = event.target.value;
+      const filtered = this.state.allUsers.filter(user => user.name.first.includes(search));
+      // this.setState({ searchTerm: search})
+      this.setState({ allUsers: filtered })
+
    };
       // change (setState) searchTerm
       // filter users based on searchTerm
@@ -70,7 +50,7 @@ class App extends React.Component {
          <div className="App">
             <Wrapper>
                <Hero />
-               <FormInput />
+               <SearchForm handleInputChange={this.handleInputChange}/>
                <SearchResults allUsers={this.state.allUsers} />
                <Footer />
             </Wrapper>

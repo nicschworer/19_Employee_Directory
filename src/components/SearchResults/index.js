@@ -3,10 +3,7 @@ import Table from "react-bootstrap/Table";
 import "./style.css";
 
 function SearchResults(props) {
-  console.log("fuck")
-  console.log(props.allUsers);
   return (
-    
 		<div className="table-body">
 			{props.children}
 			<Table striped bordered hover>
@@ -26,8 +23,8 @@ function SearchResults(props) {
 					{props.allUsers.map((person) => (
 						<tr>
               <td>
-                  <img src={person.picture.medium}/>
-                </td>
+                <img alt= {person.name.first} src={person.picture.medium} />
+              </td>
 							<td>{person.name.first} {person.name.last}</td>
 							<td>{person.location.city}, {person.location.state}</td>
 							<td>{person.email}</td>

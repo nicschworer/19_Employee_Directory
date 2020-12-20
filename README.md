@@ -6,6 +6,7 @@
 This employee react app can be used to generate a random list of users/employees. When you load the page you see a table of employees/users which you can filter based on name and sort from a-z or vice versa.
 
 Please see the deployed version here: 
+https://nicschworer.github.io/19_Employee_Directory/
 
 
 ## Table of Contents

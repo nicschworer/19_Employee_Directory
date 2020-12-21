@@ -10,8 +10,8 @@ function SearchResults(props) {
 				<thead>
 					{/* make these into links */}
 					<tr>
-          <th>Photo</th>
-						<th>Full Name</th>
+          				<th>Photo</th>
+						<th className="test" onClick={props.handleSortClick} >Full Name</th>
 						<th>Location</th>
 						<th>Email</th>
 						<th>Age</th>
@@ -20,7 +20,7 @@ function SearchResults(props) {
 				</thead>
 				<tbody>
 					{/* for each thing render a row with modified info */}
-					{props.allUsers.map((person) => (
+					{props.filteredUsers.map((person) => (
 						<tr>
               <td>
                 <img alt= {person.name.first} src={person.picture.medium} />

@@ -25,17 +25,6 @@ followed by:
 ` $ node server.js `
 
 
-
-----
-## Badges
-
-![top](https://img.shields.io/github/languages/top/nicschworer/09_README_Generator)
-
-![count](https://img.shields.io/github/languages/count/nicschworer/09_README_Generator)
-
-![downloads](https://img.shields.io/github/downloads/nicschworer/09_README_Generator/total)
-
-
 ## Contributing
 
 If you have ideas on how to improve or want to adapt and use yourself, please feel free!
